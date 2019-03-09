@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="content" role="main">
+<div class="container space-2">
+{% include "main/markets.html" %}
+</div>
+</main>
+{% endblock content %}
+{% block scripts %}
+{{ super() }}
+<script>
+</script>
+{% endblock %}

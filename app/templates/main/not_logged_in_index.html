@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="content" role="main">
+<div class="container space-2">
+      {% include "main/markets.html" %}
+      <div class="row justify-content-lg-between align-items-md-end">
+        <div class="col-lg-9 mb-1">
+          <!-- Title -->
+          <div class="mb-3">
+            <h1 class="display-4 font-size-md-down-5 mb-0">Stock data</h1>
+            <h2 class="text-primary display-3 font-size-md-down-5 font-weight-semi-bold">Made easy.</h2>
+          </div>
+          <p>A modern, easy to read stock screener to help you put together your portfolio.</p>
+          <!-- End Title -->
+        </div>
+
+        <div class="col-lg-3 mb-4">
+          <!-- SVG Icon -->
+          <div id="SVGeasyStart" class="d-none d-lg-block" style="">
+            <figure class="ie-subscribe-2">
+            {% include "index_svg.html" %}
+            </figure>
+          </div>
+          <!-- End SVG Icon -->
+        </div>
+      </div>
+
+      <div class="row align-items-start">
+        <div class="col-lg-8">
+          <h3 class="h6">Join for free now!</h3>
+
+          <!-- Form -->
+          <form class="js-validate" novalidate="novalidate">
+            <div class="form-row">
+              <div class="col-6 col-lg-4 mb-2">
+                <div class="js-form-message">
+                  <label class="sr-only" for="signupSrName">Your name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="name" id="signupSrName" placeholder="Your name" aria-label="Your name" required="" data-msg="Name must contain only letters." data-error-class="u-has-error" data-success-class="u-has-success" aria-describedby="signupSrName-error">
+                  </div>
+            </div>
+              </div>
+
+              <div class="col-6 col-lg-4 mb-2">
+                <div class="js-form-message">
+                  <label class="sr-only" for="signupSrEmail">Your email</label>
+                  <div class="input-group">
+                    <input type="email" class="form-control" name="email" id="signupSrEmail" placeholder="Your email" aria-label="Your email" required="" data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" aria-describedby="signupSrEmail-error" aria-invalid="true">
+                  </div></div>
+              </div>
+
+              <div class="col-sm-4 mb-2">
+                <button type="submit" class="btn btn-primary btn-wide transition-3d-hover">Get Started</button>
+              </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="js-form-message mb-4">
+              <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required="" data-msg="Please accept our Terms and Conditions.">
+                <label class="custom-control-label" for="termsCheckbox">
+                  <small>
+                    I agree to the
+                    <a class="link-muted" href="../pages/terms.html">Terms and Conditions</a>
+                  </small>
+                </label>
+              </div>
+            </div>
+            <!-- End Checkbox -->
+          </form>
+          <!-- End Form -->
+        </div>
+      </div>
+
+      <div class="js-slick-carousel u-slick u-slick--gutters-2 z-index-2 mb-4 slick-initialized slick-slider slick-dotted" data-slides-show="4" data-slides-scroll="1" data-pagi-classes="d-xl-none text-center u-slick__pagination u-slick__pagination--whites mt-7 mb-0" data-responsive="[{
+               &quot;breakpoint&quot;: 1200,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 3
+               }
+             }, {
+               &quot;breakpoint&quot;: 992,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 2
+               }
+             }, {
+               &quot;breakpoint&quot;: 768,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 1
+               }
+             }, {
+               &quot;breakpoint&quot;: 554,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 1
+               }
+             }]">
+          <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1128px; transform: translate3d(0px, 0px, 0px);"><div class="js-slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 266px; height: auto;" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
+            <!-- Pricing -->
+            <div class="card">
+              <!-- Header -->
+              <header class="card-header text-center p-5">
+                <h4 class="h6 text-primary mb-3">Free</h4>
+                <span class="d-block">
+                  <span class="display-4 text-dark font-weight-normal">
+                    <span class="align-top font-size-2">$</span>0
+                  </span>
+                  <span class="d-block text-secondary font-size-1">per month</span>
+                </span>
+              </header>
+              <!-- End Header -->
+
+              <!-- Content -->
+              <div class="card-body p-5">
+                <ul class="list-group list-group-flush list-group-borderless mb-4">
+                  <li class="list-group-item">Access 6000+ Stocks</li>
+                  <li class="list-group-item">Put together a watchlist</li>
+                </ul>
+
+                <button type="button" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover" tabindex="0">Start Free</button>
+              </div>
+              <!-- End Content -->
+            </div>
+            <!-- End Pricing -->
+          </div><div class="js-slide slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 266px; height: auto;" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01">
+            <!-- Pricing -->
+            <div class="card">
+              <!-- Header -->
+              <header class="card-header text-center p-5">
+                <h4 class="h6 text-success mb-3">Premium</h4>
+                <span class="d-block">
+                  <span class="display-4 text-dark font-weight-normal">
+                    <span class="align-top font-size-2">$</span>10
+                  </span>
+                  <span class="d-block text-secondary font-size-1">per month</span>
+                </span>
+              </header>
+              <!-- End Header -->
+
+              <!-- Content -->
+              <div class="card-body p-5">
+                <ul class="list-group list-group-flush list-group-borderless mb-4">
+                  <li class="list-group-item">Download csv files</li>
+                  <li class="list-group-item">More asset classes</li>
+                </ul>
+
+                <button type="button" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover" tabindex="0">Start Basic</button>
+              </div>
+              <!-- End Content -->
+            </div>
+            <!-- End Pricing -->
+          </div></div></div>
+
+        <ul class="js-pagination d-xl-none text-center u-slick__pagination u-slick__pagination--whites mt-7 mb-0" role="tablist"><li class="slick-active slick-current" role="presentation"><span></span></li></ul></div>
+  </main>
+{% endblock %}

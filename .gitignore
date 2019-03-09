@@ -1,0 +1,5 @@
+venv
+excel_data
+*.pyc
+*.db
+static

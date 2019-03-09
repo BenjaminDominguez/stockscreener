@@ -1,0 +1,48 @@
+<!--- JS Global Compulsory --------->
+<script src="{{ url_for('static', filename='theme/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='theme/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js')}}"></script>
+<script src="{{ url_for('static', filename='theme/assets/vendor/popper.js/dist/umd/popper.min.js')}}"></script>
+<script src="{{ url_for('static', filename='theme/assets/vendor/bootstrap/bootstrap.min.js')}}"></script>
+<!--- End JS Global --------------->
+
+<!--- JS Implementing Plugins --------->
+<!-- MegaMenu -->
+<script src="{{ url_for('static', filename='theme/assets/vendor/hs-megamenu/src/hs.megamenu.js')}}"></script>
+<!-- Chart JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='theme/assets/vendor/chartist/dist/chartist.min.js')}}"></script>
+<script src="{{ url_for('static', filename='theme/assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.js')}}"></script>
+
+<!--- End JS Plugins --------->
+
+<!--- JS Front ------------>
+  <!-- Header NAVBAR -->
+<script src="{{ url_for('static', filename='theme/assets/js/components/hs.header.js')}}"></script>
+  <!-- Unfold component -->
+<script src="{{ url_for('static', filename='theme/assets/js/components/hs.unfold.js')}}"></script>
+
+<script src="{{ url_for('static', filename='theme/assets/js/components/hs.chartist-area-chart.js')}}"></script>
+<!--- End JS Front ---------->
+
+<!--JS Plugins Init ---------->
+<script>
+  $(document).on('ready', function () {
+    // initialization of header and navbar
+    $.HSCore.components.HSHeader.init($('#header'));
+    $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+    $.HSCore.components.HSChartistAreaChart.init($('.js-area-chart'));
+  });
+
+  $(window).on('load', function () {
+    // initialization of HSMegaMenu component
+    $('.js-mega-menu').HSMegaMenu({
+      event: 'click',
+      pageContainer: $('.container'),
+      breakpoint: 767.98,
+      hideTimeOut: 0
+    });
+  });
+
+</script>
+<!-- End JS Plugins Init -->
+</html>

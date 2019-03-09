@@ -1,0 +1,21 @@
+<head>
+  {% block head %}
+<title>
+  {% if title %} {{ title }} {% else %} Stocks {% endif %}
+</title>
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='theme/favicon.ico')}}">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='theme/assets/vendor/slick-carousel/slick/slick.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='theme/assets/vendor/font-awesome/css/fontawesome-all.min.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='theme//assets/vendor/hs-megamenu/src/hs.megamenu.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='theme/assets/vendor/chartist/dist/chartist.min.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='theme/assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.css')}}">
+<!-- CSS Front Template, This always goes last -->
+<link rel="stylesheet" href="{{ url_for('static', filename='theme/assets/css/theme.css')}}">
+
+{% endblock head %}
+</head>
